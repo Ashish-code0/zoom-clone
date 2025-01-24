@@ -1,17 +1,29 @@
+"use client"
+import { useState, useEffect } from 'react';
 import MeetingTypeList from '@/components/MeetingTypeList';
 
 const Home = () => {
-  const now = new Date();
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNow(new Date());
+    }, 1000); // Update every second
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
 
   const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
   const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
-      <div className="h-[303px] w-full rounded-[20px] bg-hero bg-cover">
+      <div className="h-[303px] w-full rounded-[20px] bg-black bg-cover"
+      style={{backgroundImage: 'url(bg-image/goku2.png'}}>
         <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
           <h2 className="glassmorphism max-w-[273px] rounded py-2 text-center text-base font-normal">
-            Upcoming Meeting at: 12:30 PM
+            Upcoming Meeting 
           </h2>
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>

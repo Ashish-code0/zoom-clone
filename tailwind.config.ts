@@ -20,7 +20,7 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: '#1C1F2E',
+          1: '#101114',
           2: '#161925',
           3: '#252A41',
           4: '#1E2757',
@@ -58,7 +58,8 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       backgroundImage: {
-        hero: "url('/images/hero-background.png')",
+        "nav-focus":
+          "linear-gradient(270deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%)"
       },
     },
   },

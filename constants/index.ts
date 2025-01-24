@@ -1,30 +1,29 @@
 export const sidebarLinks = [
   {
-    imgURL: '/icons/Home.svg',
-    route: '/',
-    label: 'Home',
-  },
-
-  {
-    imgURL: '/icons/upcoming.svg',
-    route: '/upcoming',
-    label: 'Upcoming',
+    label: "Home",
+    imgURL: "/icons/home.svg",
+    route: "/"
   },
   {
-    imgURL: '/icons/previous.svg',
-    route: '/previous',
-    label: 'Previous',
+    label: "Upcoming",
+    imgURL: "/icons/calender.svg",
+    route: "/upcoming"
   },
   {
-    imgURL: '/icons/Video.svg',
-    route: '/recordings',
-    label: 'Recordings',
+    label: "Previous",
+    imgURL: "/icons/clock.svg",
+    route: "/previous"
   },
   {
-    imgURL: '/icons/add-personal.svg',
-    route: '/personal-room',
-    label: 'Personal Room',
+    label: "Personal Room",
+    imgURL: "/icons/plus.svg",
+    route: "/personal-room"
   },
+  {
+    label: "Team Chat",
+    imgURL: "/icons/message.svg",
+    route: "/team-chat"
+  }
 ];
 
 export const avatarImages = [
